@@ -192,18 +192,18 @@ function Index() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               {
-                quote: "For the first time, my workouts, meals, and health checks are all in one place. It finally feels sustainable.",
-                name: "Saraswati M.",
-                role: "Lalitpur",
+                quote: "For the first time, my workouts, meals, and health checks are all in one place. It finally feels healthy.",
+                name: "Saraswati Pokhrel (71 F)",
+                role: "Patan",
               },
               {
                 quote: "The doctor and nutritionist worked with my trainer. I have energy I haven't had in years.",
-                name: "Janak Tiwari",
+                name: "Janak Tiwari (38 M)",
                 role: "Kathmandu",
               },
               {
                 quote: "Everything is customized. No generic plans. Just support",
-                name: "Priya Giri",
+                name: "Priya Giri (23 F)",
                 role: "Imadol",
               },
             ].map((t) => (
