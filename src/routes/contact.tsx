@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState, type FormEvent } from "react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -24,6 +26,24 @@ const contactInfo = [
 ];
 
 function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting || isSent) return;
+    const form = e.currentTarget;
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSent(true);
+      toast.success("Message sent!", {
+        description: "We'll get back to you within one business day.",
+      });
+      form.reset();
+      setTimeout(() => setIsSent(false), 4000);
+    }, 900);
+  };
   return (
     <>
       <section className="border-b border-border bg-cream-100 py-20 md:py-28">
@@ -47,7 +67,7 @@ function ContactPage() {
               <p className="mt-2 text-sm text-muted-foreground">
                 Fill out the form below and we'll reach out within one business day.
               </p>
-              <form className="mt-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div className="space-y-2">
                     <label htmlFor="firstName" className="text-sm font-medium text-card-foreground">
@@ -109,8 +129,17 @@ function ContactPage() {
                     placeholder="Tell us a little about your goals..."
                   />
                 </div>
-                <Button type="submit" className="w-full">
-                  Send message
+                <Button type="submit" className="w-full" disabled={isSubmitting || isSent}>
+                  {isSent ? (
+                    <>
+                      <CheckCircle2 className="size-4" />
+                      Message sent
+                    </>
+                  ) : isSubmitting ? (
+                    "Sending..."
+                  ) : (
+                    "Send message"
+                  )}
                 </Button>
               </form>
             </div>
