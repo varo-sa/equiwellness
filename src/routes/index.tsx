@@ -194,17 +194,17 @@ function Index() {
               {
                 quote: "For the first time, my workouts, meals, and health checks are all in one place. It finally feels sustainable.",
                 name: "Sarah M.",
-                role: "Member since 2023",
+                role: "Lalitpur",
               },
               {
                 quote: "The doctor and nutritionist worked with my trainer to address my fatigue. I have energy I haven't had in years.",
                 name: "James T.",
-                role: "Member since 2024",
+                role: "Kathmandu",
               },
               {
                 quote: "Everything is tailored. No generic plans, no guilt — just support that fits my actual life.",
                 name: "Priya K.",
-                role: "Member since 2022",
+                role: "Imadol",
               },
             ].map((t) => (
               <div key={t.name} className="rounded-2xl border border-border bg-card p-8">
