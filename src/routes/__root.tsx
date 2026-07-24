@@ -24,7 +24,7 @@ function NotFoundComponent() {
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Go home
           </Link>
@@ -56,13 +56,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Try again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center justify-center rounded-full border border-border bg-background px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
             Go home
           </a>
@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Equi Wellness Health Club" },
+      { name: "description", content: "A premium health club blending guided exercise, nutritionist care, doctor consultations, and lifestyle maintenance — all tailored to your body and goals." },
+      { name: "author", content: "Equi Wellness" },
+      { property: "og:title", content: "Equi Wellness Health Club" },
+      { property: "og:description", content: "Guided exercise, nutrition, medical care, and lifestyle maintenance tailored to your body." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@EquiWellness" },
     ],
     links: [
       {
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -114,13 +120,124 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function Header() {
+  return (
+    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+      <div className="container-wide flex h-16 items-center justify-between">
+        <Link to="/" className="flex items-center gap-2">
+          <span className="font-display text-xl font-semibold text-foreground">Equi Wellness</span>
+        </Link>
+        <nav className="hidden items-center gap-8 md:flex">
+          <Link
+            to="/"
+            activeProps={{ className: "text-foreground" }}
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Home
+          </Link>
+          <Link
+            to="/services"
+            activeProps={{ className: "text-foreground" }}
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Services
+          </Link>
+          <Link
+            to="/about"
+            activeProps={{ className: "text-foreground" }}
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            About
+          </Link>
+          <Link
+            to="/contact"
+            activeProps={{ className: "text-foreground" }}
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Contact
+          </Link>
+        </nav>
+        <Link
+          to="/contact"
+          className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          Book a consultation
+        </Link>
+      </div>
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="border-t border-border bg-cream-100">
+      <div className="container-wide py-12 md:py-16">
+        <div className="grid gap-8 md:grid-cols-3">
+          <div>
+            <span className="font-display text-2xl font-semibold text-foreground">Equi Wellness</span>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
+              A premium health club where exercise, nutrition, medical care, and lifestyle guidance come together.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-body text-sm font-semibold uppercase tracking-wider text-foreground">Explore</h4>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <Link to="/services" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-body text-sm font-semibold uppercase tracking-wider text-foreground">Contact</h4>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li>hello@equiwellness.com</li>
+              <li>+1 (555) 123-4567</li>
+              <li>123 Wellness Lane, Suite 100</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} Equi Wellness Health Club. All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            <a href="#" className="text-xs text-muted-foreground transition-colors hover:text-foreground">
+              Privacy
+            </a>
+            <a href="#" className="text-xs text-muted-foreground transition-colors hover:text-foreground">
+              Terms
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </QueryClientProvider>
   );
 }
