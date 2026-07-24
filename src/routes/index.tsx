@@ -164,7 +164,7 @@ function Index() {
               <div className="aspect-[4/3] overflow-hidden rounded-2xl">
                 <img
                   src={lifestyleImage}
-                  alt="Morning wellness routine with meditation, healthy food, and journaling"
+                  alt="Happy multi-generational Nepali family in a cozy home, representing whole-family wellness"
                   loading="lazy"
                   width={1024}
                   height={768}
