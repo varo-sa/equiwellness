@@ -202,7 +202,7 @@ function Index() {
                 role: "Kathmandu",
               },
               {
-                quote: "Everything is tailored. No generic plans, no guilt — just support that fits my actual life.",
+                quote: "Everything is customized. No generic plans. Just support",
                 name: "Priya Giri",
                 role: "Imadol",
               },
@@ -227,8 +227,10 @@ function Index() {
               <h2 className="font-display text-3xl font-medium text-primary-foreground md:text-4xl">
                 Start with a complimentary consultation
               </h2>
-              <p className="mt-4 text-primary-foreground/80">
-                Meet our team, tour the club, and discover a wellness plan designed around you.
+              <p className="mt-4 whitespace-pre-line text-primary-foreground/80">
+                -Meet our team{"\n"}
+                -Tour the club{"\n"}
+                &nbsp;-Discover a wellness plan designed only for you
               </p>
               <Button asChild size="lg" variant="outline" className="mt-8 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <Link to="/contact">
