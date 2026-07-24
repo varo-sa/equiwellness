@@ -193,17 +193,17 @@ function Index() {
             {[
               {
                 quote: "For the first time, my workouts, meals, and health checks are all in one place. It finally feels sustainable.",
-                name: "Sarah M.",
+                name: "Saraswati M.",
                 role: "Lalitpur",
               },
               {
                 quote: "The doctor and nutritionist worked with my trainer to address my fatigue. I have energy I haven't had in years.",
-                name: "James T.",
+                name: "Janak T.",
                 role: "Kathmandu",
               },
               {
                 quote: "Everything is tailored. No generic plans, no guilt — just support that fits my actual life.",
-                name: "Priya K.",
+                name: "Priya Giri",
                 role: "Imadol",
               },
             ].map((t) => (
