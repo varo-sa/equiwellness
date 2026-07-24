@@ -17,10 +17,10 @@ export const Route = createFileRoute("/contact")({
 });
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@equiwellness.com" },
-  { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-  { icon: MapPin, label: "Address", value: "123 Wellness Lane, Suite 100" },
-  { icon: Clock, label: "Hours", value: "Mon–Sat: 6am – 9pm" },
+  { icon: Mail, label: "Email", value: "equi@wellnessnepal.com" },
+  { icon: Phone, label: "Phone", value: "+977 9851077622" },
+  { icon: MapPin, label: "Address", value: "Radhe Radhe, Bhaktapur" },
+  { icon: Clock, label: "Hours", value: "Mon–Sat: 6am – 4pm" },
 ];
 
 function ContactPage() {
@@ -141,7 +141,7 @@ function ContactPage() {
                 <p className="mt-2 text-sm text-muted-foreground">
                   Speak with our membership team to schedule your complimentary consultation.
                 </p>
-                <p className="mt-4 font-display text-xl text-primary">+1 (555) 123-4567</p>
+                <p className="mt-4 font-display text-xl text-primary">+977 9851077622</p>
               </div>
             </div>
           </div>
