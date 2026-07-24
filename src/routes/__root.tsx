@@ -179,7 +179,7 @@ function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <span className="font-display text-2xl font-semibold text-foreground">Equi Wellness</span>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 whitespace-nowrap text-sm leading-relaxed text-muted-foreground">
               A premium health club where exercise, nutrition, medical care, and lifestyle guidance come together.
             </p>
           </div>
