@@ -162,9 +162,9 @@ function Index() {
             </div>
             <div className="relative">
               <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-                <img
+              <img
                   src={lifestyleImage}
-                  alt="Happy multi-generational Nepali family in a cozy home, representing whole-family wellness"
+                  alt="Happy Nepali grandmother and granddaughter in a cozy home, representing whole-family wellness"
                   loading="lazy"
                   width={1024}
                   height={768}
