@@ -206,9 +206,9 @@ function Footer() {
           <div>
             <h4 className="font-body text-sm font-semibold uppercase tracking-wider text-foreground">Contact</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>hello@equiwellness.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>123 Wellness Lane, Suite 100</li>
+              <li>equi@wellnessnepal.com</li>
+              <li>+977 9851077622</li>
+              <li>Radhe Radhe, Bhaktapur</li>
             </ul>
           </div>
         </div>
