@@ -129,8 +129,17 @@ function ContactPage() {
                     placeholder="Tell us a little about your goals..."
                   />
                 </div>
-                <Button type="submit" className="w-full">
-                  Send message
+                <Button type="submit" className="w-full" disabled={isSubmitting || isSent}>
+                  {isSent ? (
+                    <>
+                      <CheckCircle2 className="size-4" />
+                      Message sent
+                    </>
+                  ) : isSubmitting ? (
+                    "Sending..."
+                  ) : (
+                    "Send message"
+                  )}
                 </Button>
               </form>
             </div>
