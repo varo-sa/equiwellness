@@ -26,6 +26,24 @@ const contactInfo = [
 ];
 
 function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting || isSent) return;
+    const form = e.currentTarget;
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSent(true);
+      toast.success("Message sent!", {
+        description: "We'll get back to you within one business day.",
+      });
+      form.reset();
+      setTimeout(() => setIsSent(false), 4000);
+    }, 900);
+  };
   return (
     <>
       <section className="border-b border-border bg-cream-100 py-20 md:py-28">
