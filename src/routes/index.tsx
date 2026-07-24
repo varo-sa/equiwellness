@@ -72,8 +72,9 @@ function Index() {
             <h1 className="mt-6 text-balance font-display text-4xl font-medium leading-[1.15] text-foreground md:text-6xl lg:text-7xl">
               Health built around <em className="not-italic text-primary">your</em> body
             </h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground md:text-xl">
-              Equi Wellness brings together guided exercise, nutritionist care, doctor consultations, and lifestyle maintenance — all tailored to how you live.
+            <p className="mt-6 max-w-lg whitespace-pre-line text-lg leading-relaxed text-muted-foreground md:text-xl">
+              Equi Wellness brings together guided exercise, nutritionist care, doctor consultations, and lifestyle maintenance{"\u00a0"}{"\n"}
+              all customized as per your requirement.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild size="lg">
