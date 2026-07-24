@@ -198,7 +198,7 @@ function Index() {
               },
               {
                 quote: "The doctor and nutritionist worked with my trainer to address my fatigue. I have energy I haven't had in years.",
-                name: "Janak T.",
+                name: "Janak Tiwari",
                 role: "Kathmandu",
               },
               {
