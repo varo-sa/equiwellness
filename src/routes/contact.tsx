@@ -67,7 +67,7 @@ function ContactPage() {
               <p className="mt-2 text-sm text-muted-foreground">
                 Fill out the form below and we'll reach out within one business day.
               </p>
-              <form className="mt-8 space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div className="space-y-2">
                     <label htmlFor="firstName" className="text-sm font-medium text-card-foreground">
