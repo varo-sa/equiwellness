@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Equi Wellness Health Club" },
-      { name: "description", content: "A premium health club blending guided exercise, nutritionist care, doctor consultations, and lifestyle maintenance — all tailored to your body and goals." },
+      { title: "Equi Wellness Health Club — Exercise, Nutrition & Medical Care" },
+      { name: "description", content: "Join Equi Wellness for guided exercise, nutritionist care, doctor consultations, and lifestyle maintenance tailored to your body and goals." },
       { name: "author", content: "Equi Wellness" },
-      { property: "og:title", content: "Equi Wellness Health Club" },
-      { property: "og:description", content: "Guided exercise, nutrition, medical care, and lifestyle maintenance tailored to your body." },
+      { property: "og:title", content: "Equi Wellness Health Club — Exercise, Nutrition & Medical Care" },
+      { property: "og:description", content: "Join Equi Wellness for guided exercise, nutritionist care, doctor consultations, and lifestyle maintenance tailored to your body and goals." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@EquiWellness" },
+      { name: "twitter:title", content: "Equi Wellness Health Club — Exercise, Nutrition & Medical Care" },
+      { name: "twitter:description", content: "Join Equi Wellness for guided exercise, nutritionist care, doctor consultations, and lifestyle maintenance tailored to your body and goals." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/dc204964-cac4-4d0b-8f4f-770df50ddd2a" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/dc204964-cac4-4d0b-8f4f-770df50ddd2a" },
     ],
     links: [
       {
