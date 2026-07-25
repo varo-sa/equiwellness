@@ -165,8 +165,8 @@ function Index() {
             <div className="relative">
               <div className="aspect-[4/3] overflow-hidden rounded-2xl">
               <img
-                  src={lifestyleImage}
-                  alt="Happy Nepali grandmother and granddaughter in a cozy home, representing whole-family wellness"
+                  src={philosophyFamilyImage.url}
+                  alt="Happy multi-generational Nepali family gathering in a bright, comfortable middle-class home, representing whole-family wellness"
                   loading="lazy"
                   width={1024}
                   height={768}
