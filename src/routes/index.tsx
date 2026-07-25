@@ -6,6 +6,7 @@ import nutritionistImage from "@/assets/nutritionist.jpg";
 import doctorImage from "@/assets/doctor.jpg";
 import exerciseImage from "@/assets/exercise.jpg";
 import lifestyleImage from "@/assets/lifestyle.jpg";
+import philosophyFamilyImage from "@/assets/philosophy-family.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
